@@ -1,0 +1,59 @@
+{
+  "name": "wafa-nearby",
+  "version": "1.0.0",
+  "description": "NEARBY - What's happening around you? The Internet for the Physical World",
+  "private": true,
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "test:ci": "npm run test:ci --workspaces",
+    "test:unit": "npm run test:unit --workspaces",
+    "test:integration": "npm run test:integration --workspaces",
+    "test:e2e": "npm run test:e2e --workspaces",
+    "test:coverage": "npm run test:coverage --workspaces",
+    "test:performance": "npm run test:performance --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces",
+    "format:check": "npm run format:check --workspaces",
+    "migrate": "cd packages/backend && npm run migrate",
+    "seed": "cd packages/backend && npm run seed",
+    "docker:build": "docker build -t wafa-nearby:latest .",
+    "docker:run": "docker run -p 5000:5000 -p 3000:3000 wafa-nearby:latest",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "location-based",
+    "real-time",
+    "events",
+    "discovery",
+    "geospatial",
+    "community"
+  ],
+  "author": "MD Mehedi Hasan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mehedii364/Wafa-Nearby.git"
+  }
+}
